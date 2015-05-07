@@ -1,0 +1,63 @@
+Source: firewalld
+Section: net
+Priority: optional
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Uploaders: Michael Biebl <biebl@debian.org>
+Build-Depends: debhelper (>= 9),
+               dh-systemd,
+               dh-autoreconf,
+               pkg-config,
+               intltool,
+               gettext,
+               autotools-dev,
+               python (>= 2.6.6-3~),
+               libglib2.0-dev,
+               xsltproc,
+               docbook-xsl,
+               docbook-xml
+Standards-Version: 3.9.6
+Vcs-Git: git://git.debian.org/git/pkg-utopia/firewalld.git
+Vcs-Browser: http://git.debian.org/?p=pkg-utopia/firewalld.git;a=summary
+Homepage: https://fedorahosted.org/firewalld/
+X-Python-Version: >= 2.7
+
+Package: firewalld
+Architecture: all
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${python:Depends},
+         python-dbus,
+         python-slip-dbus,
+         python-gi,
+         gir1.2-glib-2.0,
+         iptables,
+         dbus,
+         policykit-1
+Recommends: ebtables
+Description: dynamically managed firewall with support for network zones
+ firewalld is a dynamically managed firewall daemon with support for
+ network/firewall zones to define the trust level of network connections
+ or interfaces. It has support for IPv4, IPv6 firewall settings and for
+ ethernet bridges and has a separation of runtime and persistent
+ configuration options.
+ It also provides a D-Bus interface for services or applications to add
+ and apply firewall rules on-the-fly.
+
+Package: firewall-applet
+Architecture: all
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${python:Depends},
+         firewalld (= ${source:Version}),
+         policykit-1,
+         python-dbus,
+         python-slip-dbus,
+         python-gi,
+         gir1.2-gtk-3.0,
+         gir1.2-glib-2.0,
+         gir1.2-notify-0.7,
+         gir1.2-networkmanager-1.0
+Description: panel applet providing status information of firewalld
+ This package provides a panel applet which shows status information
+ of firewalld and also graphical configuration tool to change the
+ firewall settings.

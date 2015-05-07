@@ -1,0 +1,10 @@
+usr/bin/firewall-applet
+usr/bin/firewall-config
+usr/share/appdata/firewall-config.appdata.xml
+usr/share/applications/
+usr/share/glib-2.0/schemas/
+usr/share/firewalld/firewall-config.glade
+usr/share/firewalld/gtk3_chooserbutton.py
+usr/share/icons/
+etc/xdg/autostart/
+

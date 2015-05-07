@@ -7,6 +7,7 @@ Conflicts=iptables.service ip6tables.service ebtables.service
 
 [Service]
 EnvironmentFile=-/etc/sysconfig/firewalld
+EnvironmentFile=-/etc/default/firewalld
 ExecStart=@sbindir@/firewalld --nofork --nopid $FIREWALLD_ARGS
 ExecReload=/bin/kill -HUP $MAINPID
 # supress to log debug and error output also to /var/log/messages

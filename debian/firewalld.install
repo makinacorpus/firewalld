@@ -1,0 +1,12 @@
+usr/share/man/
+usr/share/polkit-1/
+usr/share/locale/
+usr/share/bash-completion/
+usr/lib/firewalld/
+usr/lib/python*/
+usr/bin/firewall-cmd
+usr/bin/firewall-offline-cmd
+usr/sbin/firewalld
+lib/systemd/
+etc/firewalld/
+etc/dbus-1/
